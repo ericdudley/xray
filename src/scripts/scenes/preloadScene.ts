@@ -4,24 +4,23 @@ export default class PreloadScene extends Phaser.Scene {
   }
 
   preload() {
-    this.load.image('phaser-logo', 'assets/img/phaser-logo.png')
   }
 
   create() {
-    this.scene.start('MainScene')
+    this.scene.start('IntroScene')
 
     /**
-     * This is how you would dynamically import the mainScene class (with code splitting),
-     * add the mainScene to the Scene Manager
+     * This is how you would dynamically import the introScene class (with code splitting),
+     * add the introScene to the Scene Manager
      * and start the scene.
-     * The name of the chunk would be 'mainScene.chunk.js
+     * The name of the chunk would be 'introScene.chunk.js
      * Find more about code splitting here: https://webpack.js.org/guides/code-splitting/
      */
     // let someCondition = true
     // if (someCondition)
-    //   import(/* webpackChunkName: "mainScene" */ './mainScene').then(mainScene => {
-    //     this.scene.add('MainScene', mainScene.default, true)
+    //   import(/* webpackChunkName: "introScene" */ './introScene').then(introScene => {
+    //     this.scene.add('IntroScene', introScene.default, true)
     //   })
-    // else console.log('The mainScene class will not even be loaded by the browser')
+    // else console.log('The introScene class will not even be loaded by the browser')
   }
 }
